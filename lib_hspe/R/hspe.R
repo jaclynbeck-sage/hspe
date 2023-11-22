@@ -119,6 +119,9 @@ hspe <- function(Y, references = NULL, pure_samples = NULL, n_markers = NULL, ma
     Y <- cmbd$Y
     pure_samples <- cmbd$pure_samples
     
+    rm(cmbd)
+    gc()
+
     # Removed arguments
     prc <- process_markers(Y, pure_samples, n_markers, markers, marker_method)
     n_markers <- prc$n_markers
