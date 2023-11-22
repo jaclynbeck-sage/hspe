@@ -2,3 +2,5 @@
 
 export(find_markers)
 export(hspe)
+
+import(Matrix)

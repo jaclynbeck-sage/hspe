@@ -43,6 +43,11 @@ L <- function(p, y, Z, W, sto = FALSE, fit_scale = NULL, loss_fn = NULL) {
         fit_scale <- log
     Kall <- nrow(Z)
     p <- p_to_mtx(p, Kall = Kall, sto = sto)
+
+    if (all(p == 0) || any(is.na(p))) {
+      return(Inf)
+    }
+
     y[y <= 1] <- 1
     Z[Z <= 1] <- 1
     ly <- fit_scale(y)

@@ -9,6 +9,7 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports:
     DEoptimR,
+    Matrix,
     nloptr
 Suggests:
     knitr,
